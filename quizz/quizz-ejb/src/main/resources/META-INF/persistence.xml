@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="quizz-ejb">
+		<jta-data-source>java:jboss/datasources/quizzDS</jta-data-source>
+		<class>domain.Correction</class>
+		<class>domain.CorrectionId</class>
+		<class>domain.Level</class>
+		<class>domain.LevelId</class>
+		<class>domain.PassQuiz</class>
+		<class>domain.PassQuizId</class>
+		<class>domain.Player</class>
+		<class>domain.Question</class>
+		<class>domain.Quiz</class>
+		<class>domain.Response</class>
+		<class>domain.Theme</class>
+		<properties>
+			<property name="javax.persistence.schema-generation.database.action"
+				value="drop-and-create" />
+		</properties>
+
+	</persistence-unit>
+</persistence>
