@@ -14,11 +14,19 @@ import javax.persistence.Id;
 @Entity
 public class Player implements Serializable {
 
+	public Player(String name, String login, String password) {
+		super();
+		this.name = name;
+		this.login = login;
+		this.password = password;
+	}
+
 	private Integer id;
 	private String name;
 	private String login;
 	private String password;
 	private static final long serialVersionUID = 1L;
+	
 
 	public Player() {
 		super();
